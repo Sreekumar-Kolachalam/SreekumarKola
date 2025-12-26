@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
 	int n;
 	printf("give value to n:");
@@ -8,4 +8,5 @@ void main()
 		printf("its even");
 	else
 		printf("its odd");
+        return 0;
 }
