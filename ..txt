@@ -1,0 +1,4 @@
+3:make file com switch make same file try to switch stash then switch
+5:create com pull without .git ls tok git remote set-url origin https://tok@<url> push
+6:git merge --no-ff namae -m ""
+12:git log --oneline git revert id
