@@ -1,6 +1,10 @@
 qewrrttyyuayshvc
 i
 hi
+<<<<<<< HEAD
 ahbid
 ibiub
 index
+=======
+okrrr
+>>>>>>> feature
