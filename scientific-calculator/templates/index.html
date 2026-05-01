@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator | Premium Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator glass">
+            <div class="display-section">
+                <div class="history" id="history"></div>
+                <input type="text" id="display" readonly placeholder="0">
+            </div>
+            
+            <div class="keypad">
+                <!-- Row 1: Scientific Functions -->
+                <button class="btn scientific" onclick="append('sin(')">sin</button>
+                <button class="btn scientific" onclick="append('cos(')">cos</button>
+                <button class="btn scientific" onclick="append('tan(')">tan</button>
+                <button class="btn scientific" onclick="append('log(')">log</button>
+                <button class="btn scientific" onclick="append('math.π')">π</button>
+
+                <!-- Row 2: Scientific Functions Continued -->
+                <button class="btn scientific" onclick="append('pow(')">pow</button>
+                <button class="btn scientific" onclick="append('sqrt(')">sqrt</button>
+                <button class="btn scientific" onclick="append('exp(')">exp</button>
+                <button class="btn scientific" onclick="append('log10(')">log10</button>
+                <button class="btn scientific" onclick="append('math.e')">e</button>
+
+                <!-- Row 3: Standard Numbers & Operators -->
+                <button class="btn clear" onclick="clearDisplay()">C</button>
+                <button class="btn" onclick="append('(')">(</button>
+                <button class="btn" onclick="append(')')">)</button>
+                <button class="btn operator" onclick="append('/')">÷</button>
+                <button class="btn delete" onclick="backspace()">⌫</button>
+
+                <!-- Row 4 -->
+                <button class="btn" onclick="append('7')">7</button>
+                <button class="btn" onclick="append('8')">8</button>
+                <button class="btn" onclick="append('9')">9</button>
+                <button class="btn operator" onclick="append('*')">×</button>
+                <button class="btn" onclick="append('%')">%</button>
+
+                <!-- Row 5 -->
+                <button class="btn" onclick="append('4')">4</button>
+                <button class="btn" onclick="append('5')">5</button>
+                <button class="btn" onclick="append('6')">6</button>
+                <button class="btn operator" onclick="append('-')">−</button>
+                <button class="btn scientific" onclick="append('abs(')">abs</button>
+
+                <!-- Row 6 -->
+                <button class="btn" onclick="append('1')">1</button>
+                <button class="btn" onclick="append('2')">2</button>
+                <button class="btn" onclick="append('3')">3</button>
+                <button class="btn operator" onclick="append('+')">+</button>
+                <button class="btn scientific" onclick="append('**')">^</button>
+
+                <!-- Row 7 -->
+                <button class="btn" onclick="append('0')">0</button>
+                <button class="btn" onclick="append('.')">.</button>
+                <button class="btn equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
